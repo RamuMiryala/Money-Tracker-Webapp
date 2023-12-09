@@ -1,0 +1,13 @@
+<!-- views/transactions/index.ejs -->
+<!-- Add this line in your views -->
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+<h1>Money Transactions</h1>
+<p>Welcome, <%= user.username %>!</p>
+<ul>
+    <% transactions.forEach(transaction => { %>
+        <li><%= transaction.description %> - <%= transaction.amount %> (<%= transaction.type %>)</li>
+    <% }); %>
+</ul>
+<a href="/transactions/add">Add Transaction</a>
+<a href="/transactions/logout">Logout</a>
